@@ -1,20 +1,24 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+
 const webpack = require("webpack");
 
 module.exports = {
     // 번들링 모드
-    mode : "production",
+    // mode : "production",
     // 번들링 할 대상
     // entry :'./src/index.js',
     entry : {
         // app : "/index.html",
+        router: './router.js',
         app : path.resolve(__dirname,"src","index.js"),
     },
     // 번들링 파일
     output : {
-        filename : "bundle.js",
-        path : path.resolve(__dirname,"dist"),
+        filename: '[name].js',        path : path.resolve(__dirname,"dist"),        chunkFilename: '[id].[chunkhash].js'
+
     },
     module: {
         rules: [
@@ -25,13 +29,19 @@ module.exports = {
             {
                 test: /\.css$/,
                 use:["css-loader"],
-            }
+            },
+            { test: /\.hbs$/, use: ['handlebars-loader'] }
         ]
     },
     plugins: [
-        new HtmlWebpackPlugin(),
-        new webpack.ProgressPlugin(),
-
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+            template: 'index.html'
+        }),
+        new MiniCssExtractPlugin({ filename: 'app.css' }),
+        new CleanWebpackPlugin({
+            cleanAfterEveryBuildPatterns: ['dist']
+        })
     ],
     devServer: {
         // contentBase: __dirname + "dist",

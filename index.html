@@ -1,13 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="./src/index.js"></script>
+    <meta charset="UTF-8">
+    <title>spa-router-example</title>
+
 </head>
 <body>
-<script src="./src/index.js"></script>
+
+<!--BrowserHistory-->
+<div>
+    <!--Link-->
+   <div class="MainTitle"> history (BrowserHistory) 를 이용한 구현</div>
+    <div class="link-container">
+        <button>
+        <div class="link-box">
+            <span class="history" route="/about">History About</span>
+        </div>
+        </button>
+        <button>
+        <div class="link-box">
+            <span class="history" route="/home">History Home</span>
+        </div>
+        </button>
+    </div>
+
+    <!--Content-->
+    <div id="history-app"></div>
+</div>
+
+<br/>
+<br/>
+<br/>
+<hr/>
+<br/>
+<br/>
+<br/>
+
+<!--HashHistory-->
+<div>
+    <div class="MainTitle"> Hash (HashHistory) 를 이용한 구현</div>
+    <!--Link-->
+    <div class="link-container">
+        <button>
+        <div class="link-box">
+            <a class="hash" href="#about">Hash About</a>
+        </div>
+        </button>
+        <button>
+
+        <div class="link-box">
+            <a class="hash" href="#home">Hash Home</a>
+        </div>
+        </button>
+    </div>
+
+    <!--Content-->
+    <div id="hash-app"></div>
+</div>
 </body>
 </html>
