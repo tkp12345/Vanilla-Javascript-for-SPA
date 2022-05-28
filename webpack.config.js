@@ -7,7 +7,7 @@ const webpack = require("webpack");
 
 module.exports = {
     // 번들링 모드
-    // mode : "production",
+    mode : "development",
     // 번들링 할 대상
     // entry :'./src/index.js',
     entry : {
