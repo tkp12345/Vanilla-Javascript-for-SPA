@@ -13,12 +13,14 @@ const routes = {
 
 // entry point
 function initialRoutes (mode, el) {
-    console.log('mode:',mode);
-    console.log('el:',el);
+    console.log('mode:',mode)
+    console.log('el:',el)
     renderHTML(el, routes['/'])
 
     if (mode === 'history') {
+        console.log('mode === \'history\'')
         window.onpopstate = () => renderHTML(el, routes[window.location.pathname])
+
     } else {
         window.addEventListener('hashchange', () => {
             return renderHTML(el, getHashRoute())
@@ -31,8 +33,6 @@ function historyRouterPush (pathName, el) {
     //주소만 변경
     if(window.location.pathname !== pathName) {
         window.history.pushState({}, pathName, window.location.origin + pathName)
-        console.log('routes[pathName]:',routes[pathName])
-        console.log('el',el)
         renderHTML(el, routes[pathName])
     }
 }

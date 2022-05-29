@@ -7,9 +7,8 @@ const webpack = require("webpack");
 
 module.exports = {
     // 번들링 모드
-    // mode : "production",
+    mode : "development",
     // 번들링 할 대상
-    // entry :'./src/index.js',
     entry : {
         // app : "/index.html",
         router: './router.js',
@@ -51,6 +50,7 @@ module.exports = {
             directory:path.resolve(__dirname,'dist')
         },
         open: true,
+        historyApiFallback: true
     }
 
 }
