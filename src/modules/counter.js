@@ -1,19 +1,16 @@
-//엑션 정의
-const INCRESE = 'INCREASE';
+const INCREASE = 'INCREASE';
 const DECREASE = 'DECREASE';
 const SET_DIFF = 'SET_DIFF';
 
-//엑션 생성 함수
-export const increase = ()=>({type:INCRESE});
-export const decrease = ()=>({type:DECRESE});
-export const setDiff = (payload)=>({type:SET_DIFF, payload});
+export const increase = () => ({ type: INCREASE });
+export const decrease = () => ({ type: DECREASE });
+export const setDiff = (payload) => ({ type: SET_DIFF, payload });
 
-const initialState ={
-    diff:1 ,
+export const initialState = {
+    diff: 1,
     number: 0,
-}
+};
 
-// 리듀서 정의
 export default function countReducer(state = initialState, action = {}) {
     switch (action.type) {
         case INCREASE:
