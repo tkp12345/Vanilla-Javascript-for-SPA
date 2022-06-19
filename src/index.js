@@ -2,7 +2,7 @@ import { $ } from './utils/utils';
 
 import App from './App.js';
 
-new App($('#app'));
+new App($('#root'));
 
 // import { $ } from './utils/utils';
 // import App from './App.js';

@@ -9,15 +9,18 @@ module.exports = {
     // 번들링 모드
     mode : "development",
     // 번들링 할 대상
-    entry : {
-        // app : "/index.html",
-        router: './router.js',
-        app : path.resolve(__dirname,"src","index.js"),
-    },
+    entry: './src/index.js',
+
+    // entry : {
+    //     // app : "/index.html",
+    //     router: './router.js',
+    //     app : path.resolve(__dirname,"src","index.js"),
+    // },
     // 번들링 파일
     output : {
-        filename: '[name].js',        path : path.resolve(__dirname,"dist"),        chunkFilename: '[id].[chunkhash].js'
-
+        filename: '[name].js',
+        path : path.resolve(__dirname,"dist"),
+        chunkFilename: '[id].[chunkhash].js'
     },
     module: {
         rules: [
@@ -28,6 +31,10 @@ module.exports = {
             {
                 test: /\.css$/,
                 use:["css-loader"],
+            },
+            {
+                test: /\.png$/,
+                type: 'asset/resource',
             },
             { test: /\.hbs$/, use: ['handlebars-loader'] }
         ]
@@ -44,7 +51,7 @@ module.exports = {
     ],
     devServer: {
         // contentBase: __dirname + "dist",
-        port: 8080,
+        port: 3000,
         hot: false,
         static:{
             directory:path.resolve(__dirname,'dist')

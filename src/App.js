@@ -1,8 +1,7 @@
-import { $ } from './utils/utils.js';
+import {$} from './utils/utils.js';
 import Component from './core/Component.js';
-import { counterStore } from './store.js';
-import Counter from './components/Counter.js';
-import InputDiff from './components/InputDiff.js';
+import router from "./router";
+import Header from "./components/Header/Header";
 
 
 export default class App extends Component {
@@ -10,20 +9,24 @@ export default class App extends Component {
         super(...rest);
     }
 
+    async initialState() {
+        this.setState({});
+    }
+
     template() {
         return `
-      <h1>Counter</h1>
-      <section class="diff-form-component"></section>
-      <section class="counter-component"></section>
+    <div class="container">
+        <section id="header"></section>
+        <section id="app"></section>
+      </div>
     `;
     }
 
-    componentDidMount() {
-        const newInput = new InputDiff($('.diff-form-component'));
-        const counter = new Counter($('.counter-component'));
-
-        counterStore.subscribe(() => {
-            newInput.render(), counter.render();
-        });
+    async componentDidMount() {
+        window.onload = async () => {
+            const view = await router();
+            view && new view($('#app'));
+        };
+        new Header($('#header'));
     }
 }

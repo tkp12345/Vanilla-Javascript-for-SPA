@@ -2,6 +2,7 @@ export default class Component {
     $target;
     props;
     state;
+
     constructor($target, props) {
         this.$target = $target;
         this.props = props;
@@ -12,6 +13,12 @@ export default class Component {
     async initialState() {
         // 초기 state 초기화 영역
         this.render();
+    }
+
+    setState(newState) {
+        this.state = newState;
+        this.render();
+        console.log('setState : ', this.state);
     }
 
     template() {
