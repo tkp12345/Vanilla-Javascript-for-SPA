@@ -30,7 +30,13 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use:["css-loader"],
+                use: [
+                    { loader: MiniCssExtractPlugin.loader },
+                    {
+                        loader: 'css-loader',
+                        options: { import: true },
+                    },
+                ],
             },
             {
                 test: /\.png$/,
@@ -41,8 +47,8 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            filename: 'index.html',
-            template: 'index.html'
+            filename: './index.html',
+            template: './index.html'
         }),
         new MiniCssExtractPlugin({ filename: 'app.css' }),
         new CleanWebpackPlugin({

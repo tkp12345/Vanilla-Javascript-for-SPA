@@ -2,7 +2,7 @@ import Components from '../../core/Component.js';
 import Menu from './Menu';
 import '../../style/header.css';
 import {$} from "../../utils/utils";
-import LOGO from "../../../src/img/wecoing-logo.png"
+import LOGO from "../../../src/img/Logo.png"
 
 export default class Header extends Components {
     async initialState() {
@@ -16,19 +16,9 @@ export default class Header extends Components {
             <div class="header_wrap">
                 <div class="inner">
                     <h1>
-                        <img src="http://localhost:3000/843c477f764c09826cff.png" width="89" height="41"  alt="logo">
+                        <img src="http://localhost:3000/96aebfd39a50cdba11fa.png" width="auto" height="80px"  alt="logo">
                     </h1>
                     <div class="search_box">
-                        <form action="">
-                            <fieldset>
-                                <div class="search_box_wrap">
-                                    <Input type="text">
-                                    <button>
-                                        검색
-                                    </button>
-                                </div>
-                            </fieldset>
-                        </form>
                         <div class="gnb">
                             <ul class="gnb_service"></ul>
                             <div class="gnb_login">

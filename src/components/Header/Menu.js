@@ -48,6 +48,7 @@ export default class Menu extends Components {
     `;
     }
     async componentDidMount() {
+        //popstate 이벤트는 브라우저의 백 버튼이나 (history.back() 호출) 등을 통해서만 발생
         window.onpopstate = async () => {
             const view = await router();
             view && new view($('#app'));

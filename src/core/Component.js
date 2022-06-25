@@ -10,29 +10,32 @@ export default class Component {
         this.initialState();
     }
 
+    // 초기화 인터페이스
     async initialState() {
-        // 초기 state 초기화 영역
         this.render();
     }
 
+    //state 변경 인터페이스
     setState(newState) {
         this.state = newState;
+        //state를 갱신하고 다시 dom 정의
         this.render();
+
         console.log('setState : ', this.state);
     }
 
+    //컴포넌트  정의 인터페이스
     template() {
-        // JSX 와 같이 해당 컴포넌트의 UI 를 정의하는 부분
         return ``;
     }
 
+    //dom 에 컴포넌트를 삽입 하는 인터페이스
     render() {
-        // 실제 브라우저에 뿌려주는 기능
         this.$target.innerHTML = this.template();
         this.componentDidMount();
     }
 
+    //컴포넌트 마운트 구간 ,초기화 작업이 이루어지는 인터페이스
     componentDidMount() {
-        // 이벤트 등록 및 관련(하위) 컴포넌트 생성?
     }
 }

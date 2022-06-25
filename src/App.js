@@ -9,6 +9,7 @@ export default class App extends Component {
         super(...rest);
     }
 
+    //state 초기화
     async initialState() {
         this.setState({});
     }
@@ -24,8 +25,9 @@ export default class App extends Component {
 
     async componentDidMount() {
         window.onload = async () => {
-            const view = await router();
-            view && new view($('#app'));
+            const View = await router();
+            console.log('view:',View);
+            View && new View($('#app'));
         };
         new Header($('#header'));
     }
