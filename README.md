@@ -1,7 +1,7 @@
 ## 바닐라 자바스크립트를 이용한 SPA 프레임 워크 구현해보기
 
 ---
->###실행 방법
+>### 실행 방법
 ```
 - git clone
 - npm i 
@@ -10,13 +10,13 @@
 ```
 <br/>
 
->###환경설정 
+>### 환경설정 
 - Webpack + Babel
 <br/>
 <br/>
 <br/>
 
->###라우터  vanilaJS 로 만들기 :
+>### 라우터  vanilaJS 로 만들기 :
 
  - History API
 
@@ -24,7 +24,7 @@
 
 <br/>
 
->###상태관리(rudux) vanilaJS 로 만들기 :
+>### 상태관리(rudux) vanilaJS 로 만들기 :
 - 옵저버 패턴 
 - 리덕스 패턴/방식 
 
