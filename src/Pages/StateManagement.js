@@ -1,13 +1,12 @@
+import Components from '../core/Component.js';
+import {counterStore} from "../store";
+import {$} from "../utils/utils";
+import {like, disLike} from "../modules/counter";
 
-import Component from '../core/Component.js';
-import { decrease, increase } from '../modules/counter.js';
-
-import { counterStore } from '../store.js';
-import { $ } from '../utils/utils';
-
-export default class Like extends Component {
-    constructor(...rest) {
-        super(...rest);
+export default class StateManagement extends Components {
+    constructor(props) {
+        super(props); // 추후에 하위로 컴포넌트를 런더링 할 때 필요한 부분
+        this.initialState(); // 초기값 설정
     }
 
     template() {

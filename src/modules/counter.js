@@ -1,9 +1,9 @@
-const INCREASE = 'INCREASE';
-const DECREASE = 'DECREASE';
+const LIKE = 'LIKE';
+const DISLIKE = 'DISLIKE';
 const SET_DIFF = 'SET_DIFF';
 
-export const increase = () => ({ type: INCREASE });
-export const decrease = () => ({ type: DECREASE });
+export const like = () => ({ type: LIKE });
+export const disLike = () => ({ type: DISLIKE });
 export const setDiff = (payload) => ({ type: SET_DIFF, payload });
 
 export const initialState = {
@@ -13,12 +13,12 @@ export const initialState = {
 
 export default function countReducer(state = initialState, action = {}) {
     switch (action.type) {
-        case INCREASE:
+        case LIKE:
             return {
                 ...state,
                 number: state.number + state.diff,
             };
-        case DECREASE:
+        case DISLIKE:
             return {
                 ...state,
                 number: state.number - state.diff,

@@ -6,8 +6,6 @@ import LOGO from "../../../src/img/Logo.png"
 
 export default class Header extends Components {
     async initialState() {
-        console.log(LOGO)
-
         this.setState({});
     }
     template() {
