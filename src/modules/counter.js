@@ -8,7 +8,7 @@ export const setDiff = (payload) => ({ type: SET_DIFF, payload });
 
 export const initialState = {
     diff: 1,
-    number: 0,
+    like: 0,
 };
 
 export default function countReducer(state = initialState, action = {}) {
@@ -16,12 +16,12 @@ export default function countReducer(state = initialState, action = {}) {
         case LIKE:
             return {
                 ...state,
-                number: state.number + state.diff,
+                like: state.like + state.diff,
             };
         case DISLIKE:
             return {
                 ...state,
-                number: state.number - state.diff,
+                like: state.like - state.diff,
             };
         case SET_DIFF:
             return {

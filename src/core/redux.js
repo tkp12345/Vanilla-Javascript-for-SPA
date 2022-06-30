@@ -1,8 +1,9 @@
 export function createStore(reducer) {
     let state;
-
+console.log('현재 state:',JSON.stringify(state))
     // 구독 내용을 관리 (렌더링 시켜줄 컴포넌트 담을 그릇)
     const listeners = new Set();
+    console.log('현재 listeners:',JSON.stringify(listeners))
 
     // 현재 상태를 가져오기
     const getState = () => ({ ...state });
@@ -11,6 +12,8 @@ export function createStore(reducer) {
     const dispatch = (action) => {
         state = reducer(state, action);
         // console.log('update state', state);
+        console.log('state:',state)
+        console.log('action:',action)
         publish();
     };
 // state에 어떤 이벤트가 발생할 때 실행되어야하는 함수를 등록하는 함수입니다.
