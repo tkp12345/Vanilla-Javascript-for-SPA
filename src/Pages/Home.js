@@ -27,7 +27,7 @@ export default class Home extends Components {
                     상태관리 컴포넌트 렌더링 데이터
                 </div>
                  <div class="sub_section">
-                    전역 상태 좋아요 수 : ${like}
+                    전역 상태 좋아요 수 : <span>${like}</span>
                  </div>
              </li>
            <div class="home_title">
@@ -38,13 +38,11 @@ export default class Home extends Components {
                     가상돔 
                 </div>
                  <div class="sub_section">
-                 준비중입니다...
+                 ⚠ ‍준비중입니다...
                  </div>
             </li>
-          
-  
          </ul>
-</div>
+        </div>
       </div>
     `;
     }

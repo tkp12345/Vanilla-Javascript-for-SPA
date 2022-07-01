@@ -29,14 +29,14 @@ export default class Menu extends Components {
                         </ul>
                     </div>
                     <div class="sub_menu">
-                    <ul class="hub_link">
-                    	<li data-sm="latest">
-                    		<span>1</span>
-						</li>
-						<li data-sm="channel">
-							<span>2</span>
-						</li>
-					</ul>
+<!--                    <ul class="hub_link">-->
+<!--                    	<li data-sm="latest">-->
+<!--                    		<span>1</span>-->
+<!--						</li>-->
+<!--						<li data-sm="channel">-->
+<!--							<span>2</span>-->
+<!--						</li>-->
+<!--					</ul>-->
 				</div>
 			</div>
        </div>

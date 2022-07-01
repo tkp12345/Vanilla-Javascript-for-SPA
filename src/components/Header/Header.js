@@ -20,7 +20,7 @@ export default class Header extends Components {
                         <div class="gnb">
                             <ul class="gnb_service"></ul>
                             <div class="gnb_login">
-                                <span>로그인</span>
+                                <span>roberto</span>
                             </div>
                         </div>
                     </div>
