@@ -1,6 +1,6 @@
 ## 바닐라 자바스크립트를 이용한 SPA 프레임 워크 구현해보기
 
----
+
 >### 실행 방법
 ```
 - git clone
@@ -8,6 +8,11 @@
 - npm run build
 - npm start
 ```
+<br/>
+
+>### 기능 시연 (상태관리 + 라우터 )
+![vanillaJS for spa ](https://user-images.githubusercontent.com/46067837/176877166-27f9879c-1c06-4d99-804a-18b88172657b.gif)
+<br/>
 <br/>
 
 >### 환경설정 
