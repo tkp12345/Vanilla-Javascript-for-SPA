@@ -10,12 +10,6 @@ module.exports = {
     mode : "development",
     // 번들링 할 대상
     entry: './src/index.js',
-
-    // entry : {
-    //     // app : "/index.html",
-    //     router: './router.js',
-    //     app : path.resolve(__dirname,"src","index.js"),
-    // },
     // 번들링 파일
     output : {
         filename: '[name].js',
@@ -25,7 +19,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test:/\.html$/, //적용할 정규식
+                test:/\.html$/,
                 use:["html-loader"],
             },
             {
@@ -41,6 +35,13 @@ module.exports = {
             {
                 test: /\.png$/,
                 type: 'asset/resource',
+            },
+            {
+                test: /\.js$/,
+                exclude: /(node_modules|pages)/,
+                use: {
+                    loader: 'babel-loader',
+                },
             },
             { test: /\.hbs$/, use: ['handlebars-loader'] }
         ]
