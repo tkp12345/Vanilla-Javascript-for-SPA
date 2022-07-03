@@ -16,7 +16,8 @@ export default class Header extends Components {
             <div class="header_wrap">
                 <div class="inner">
                     <h1>
-                        <img src="http://localhost:3000/96aebfd39a50cdba11fa.png" width="auto" height="80px"  alt="logo">
+<!--                        <img src="http://localhost:3000/96aebfd39a50cdba11fa.png" width="auto" height="80px"  alt="logo">-->
+                        <img src=${LOGO} width="auto" height="80px"  alt="logo">
                     </h1>
                     <div class="search_box">
                         <div class="gnb">
